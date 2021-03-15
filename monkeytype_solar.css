@@ -13,13 +13,11 @@ byun-sungwoo
 }
 
 /* Background/Colors/Font */
+/* https://www.tutorialbrain.com/css_tutorial/css_font_family_list/ */
 body {
 	background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed;
 	background-size: cover;
 	font-family: "Courier New";
-/*     font-family: "SimSun"; */
-/*     font-family: "Ink Free"; */
-/*     font-family: "Roboto"; */
 	font-weight: 500;
 	overflow-x: hidden;
 	--bg-color: var(--purple-bg);
@@ -140,8 +138,11 @@ div.page.pageSettings.active {
 	padding: 15px;
 }
 ::-webkit-scrollbar {
-	width: 0px;
-	background: transparent;
+	background: var(--purple-bg);
+}
+i.fas.fa-fw.fa-spin.fa-circle-notch:before {
+    color: white;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
 }
 
 /* Typing */
