@@ -126,12 +126,12 @@ div.page.pageSettings.active {
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in;
 }
-/* #typingTest letter.incorrect  {
+#typingTest letter.incorrect  {
 	animation-name: incorrect;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
-} */
+}
 .keymap{
 	user-select: none;
 	position: absolute;
@@ -179,6 +179,7 @@ div.page.pageSettings.active {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 150px;
+    text-align: center;
 }
 #menu:hover, .config:hover, .signOut:hover {
 	background-color: var(--purple-bg);
