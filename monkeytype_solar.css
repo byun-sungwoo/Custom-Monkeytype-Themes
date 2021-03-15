@@ -21,7 +21,7 @@ body {
 	overflow-x: hidden;
 	--bg-color: var(--purple-bg);
 	--main-color: var(--text-primary);
-	--caret-color: #FF217C;
+	--caret-color: var(--text-error);
 	--sub-color: white;
 	--text-color: var(--text-primary);
 	--error-color: var(--text-error);
@@ -126,12 +126,12 @@ div.page.pageSettings.active {
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-in;
 }
-#typingTest letter.incorrect  {
+/* #typingTest letter.incorrect  {
 	animation-name: incorrect;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
-}
+} */
 .keymap{
 	user-select: none;
 	position: absolute;
@@ -170,7 +170,7 @@ div.page.pageSettings.active {
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 200px;
+	width: 225px;
 }
 .signOut {
 	background: var(--frost-bg);
