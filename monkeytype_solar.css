@@ -8,15 +8,18 @@ byun-sungwoo
 	--purple-bg: rgba(72, 60, 108, .9);
 	--black-bg: rgba(49,52,58,.9);
 	--frost-bg: rgba(255,255,255,.1);
-	--text-primary: #F9F285;
-	--text-error: #FF217C;
+	--text-primary: rgb(249, 242, 133);
+	--text-error: rgb(255, 33, 124);
 }
 
 /* Background/Colors/Font */
 body {
 	background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed;
 	background-size: cover;
-	font-family: "Courier New"; /*Roboto | Ink Free*/
+	font-family: "Courier New";
+/*     font-family: "SimSun"; */
+/*     font-family: "Ink Free"; */
+/*     font-family: "Roboto"; */
 	font-weight: 500;
 	overflow-x: hidden;
 	--bg-color: var(--purple-bg);
@@ -65,8 +68,40 @@ body:focus-within {
 	position: relative;
 	margin-top: -30px;
 }
+#top .logo .bottom:hover {
+	filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
+}
+.icon-button.account.view-account .text {
+    display: none;
+}
 #startTestButton {
 	padding-left: 15px;
+}
+#menu {
+	background: var(--frost-bg);
+	border-radius: 100px;
+	width: 300px;
+}
+.config {
+	background: var(--frost-bg);
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 225px;
+}
+.signOut {
+	background: var(--frost-bg);
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
+    text-align: center;
+}
+#menu:hover, .config:hover, .signOut:hover {
+	background-color: var(--purple-bg);
+	transition: 0.25s;
 }
 
 /* Middle Section */
@@ -117,7 +152,6 @@ div.page.pageSettings.active {
 	width: 755px;
 }
 #wordsWrapper {
-	background-color: var(--frost-bg);
 	border-radius: 13px;
 }
 #typingTest letter.correct  {
@@ -127,15 +161,15 @@ div.page.pageSettings.active {
 	animation-timing-function: ease-in;
 }
 #typingTest letter.incorrect  {
+    opacity: .75;
 	animation-name: incorrect;
-	animation-duration: 1s;
+	animation-duration: .1s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
-.keymap{
-	user-select: none;
+.keymap {
+    user-select: none;
 	position: absolute;
-	background-color: var(--frost-bg);
 	left: 380px;
 	top: -300px;
 	border: 3px solid #d0d0ce;
@@ -159,50 +193,33 @@ div.page.pageSettings.active {
 	animation-name: fade-in;
 	animation-duration: .5s;
 }
-#menu {
-	background: var(--frost-bg);
-	border-radius: 100px;
-	width: 300px;
-}
-.config {
-	background: var(--frost-bg);
-	border-radius: 12.5px;
-	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 225px;
-}
-.signOut {
-	background: var(--frost-bg);
-	border-radius: 12.5px;
-	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 150px;
-    text-align: center;
-}
-#menu:hover, .config:hover, .signOut:hover {
-	background-color: var(--purple-bg);
-	transition: 0.25s;
+.keymap:hover, #wordsWrapper:hover {
+    background-color: var(--frost-bg);
+    transition: 0.25s;
 }
 
 /* Animations */
 @keyframes correct {
-	to {
-		opacity:.25;
-	}
+	to { opacity: .0; filter: blur(2px); }
 }
 @keyframes incorrect {
-	to {
-		opacity: .5;
-	}
+    0%  { transform: translate(0, 0px); }
+    25% { transform: translate(-3px, 0px); }
+    50% { transform: translate(0, 0px);  opacity: .25;}
+    75% { transform: translate(3px, 0px); }
+	to  { transform: translate(0, 0px); opacity: .75; }
 }
 @keyframes floating {
-	0%  { transform: translate(0, 0px)  rotate(40deg); }
-	25% { transform: translate(0, 30px) rotate(39deg); }
-	50% { transform: translate(0, 0px)  rotate(40deg); }
-	75% { transform: translate(0, 30px) rotate(41deg); }
-	100%{ transform: translate(0, 0px)  rotate(40deg); }
+/* 	0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
+    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0 1rem rgba(255, 33, 124, 1)) }
+	50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(11, 255, 103, 1)) }
+	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 1rem rgba(11, 255, 225, 1)) }
+	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) } */
+    0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
+    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0)) }
+	50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
+	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0)) }
+	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
 }
 @keyframes fade-in {
 	0%   { opacity: 0; }
@@ -210,7 +227,7 @@ div.page.pageSettings.active {
 }
 @keyframes focused {
 	to {
-		backdrop-filter: brightness(.5) blur(5px) grayscale(1);
-		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, .8));
+		backdrop-filter: brightness(.35) blur(5px) grayscale(1);
+		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
 	}
 }
