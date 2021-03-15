@@ -218,9 +218,9 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     
     /*keyboard pulse white*/
     0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
-    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0.2rem white) }
+    25% { transform: translate(0, 30px) rotate(38deg); filter: drop-shadow(0 0 .2rem white) }
     50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
-	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 .2rem white) }
+	75% { transform: translate(0, 30px) rotate(42deg); filter: drop-shadow(0 0 .2rem white) }
 	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
 }
 @keyframes fade-in {
