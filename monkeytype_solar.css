@@ -5,21 +5,21 @@ byun-sungwoo
 
 /* Variables */
 :root {
-    --purple-bg: rgba(72, 60, 108, .9);
-    --black-bg: rgba(49,52,58,.9);
-    --frost-bg: rgba(255,255,255,.1);
-    --text-primary: #F9F285;
-    --text-error: #FF217C;
+	--purple-bg: rgba(72, 60, 108, .9);
+	--black-bg: rgba(49,52,58,.9);
+	--frost-bg: rgba(255,255,255,.1);
+	--text-primary: #F9F285;
+	--text-error: #FF217C;
 }
 
 /* Background/Colors/Font */
 body {
-    background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed;
-  	background-size: cover;
+	background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed;
+	background-size: cover;
 	font-family: "Courier New"; /*Roboto | Ink Free*/
-    font-weight: 500;
-    overflow-x: hidden;
-    --bg-color: var(--purple-bg);
+	font-weight: 500;
+	overflow-x: hidden;
+	--bg-color: var(--purple-bg);
 	--main-color: var(--text-primary);
 	--caret-color: #FF217C;
 	--sub-color: white;
@@ -30,186 +30,186 @@ body {
 	--colorful-error-extra-color: var(--text-error);
 }
 body:focus-within {
-    animation-name: focused;
+	animation-name: focused;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
 }
 
 /* Top Section */
 #top {
-    grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: 1fr auto 1fr;
 }
 #top.focus {
-    opacity: 0;
+	opacity: 0;
 }
 #top .logo .top {
-    visibility: hidden;
+	visibility: hidden;
 }
 #top .logo .top:after {
-    content: 'monkeytype';
+	content: 'monkeytype';
 	font-weight: 600;
-    visibility: visible;
-    display: block;
-    position: relative;
+	visibility: visible;
+	display: block;
+	position: relative;
 	color: #FFA087;
 }
 #top .logo .bottom {
-    visibility: hidden;
+	visibility: hidden;
 }
 #top .logo .bottom:after {
-    content: 'Solar';
-    visibility: visible;
-    display: block;
+	content: 'Solar';
+	visibility: visible;
+	display: block;
 	color: #F6EEAF;
-    position: relative;
-    margin-top: -30px;
+	position: relative;
+	margin-top: -30px;
 }
 #startTestButton {
-    padding-left: 15px;
+	padding-left: 15px;
 }
 
 /* Middle Section */
 #middle {
-    background-color: rgba(255, 255, 255, 0);
+	background-color: rgba(255, 255, 255, 0);
 	border-radius: 9px;
-    padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Bottom Section */
 #bottom {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 /* Non Typing Pages */
 .content {
-    background-color: var(--purple-bg);
-    padding: 15px;
-    border-radius: 10px;
+	background-color: var(--purple-bg);
+	padding: 15px;
+	border-radius: 10px;
 }
 .page.pageAbout.active {
-    background-color: var(--purple-bg);
-    padding: 15px;
-    border-radius: 10px;
+	background-color: var(--purple-bg);
+	padding: 15px;
+	border-radius: 10px;
 }
 div.page.pageSettings.active {
-    width: 955px;
-    margin-top: 0px;
-    margin-right: 100px;
-    margin-bottom: 0px;
-    margin-left: -90px;
-    background-color: var(--purple-bg);
+	width: 955px;
+	margin-top: 0px;
+	margin-right: 100px;
+	margin-bottom: 0px;
+	margin-left: -90px;
+	background-color: var(--purple-bg);
 	border-radius: 10px;
-    padding: 15px;
+	padding: 15px;
 }
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+	width: 0px;
+	background: transparent;
 }
 
 /* Typing */
 #typingTest {
-    position: absolute;
-    top: 100px;
-    left: -500px;
-    width: 755px;
+	position: absolute;
+	top: 100px;
+	left: -500px;
+	width: 755px;
 }
 #wordsWrapper {
-    background-color: var(--frost-bg);
-    border-radius: 13px;
+	background-color: var(--frost-bg);
+	border-radius: 13px;
 }
 #typingTest letter.correct  {
 	animation-name: correct;
 	animation-duration: 5s;
 	animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
 }
 #typingTest letter.incorrect  {
 	animation-name: incorrect;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
-    animation-timing-function: linear;
+	animation-timing-function: linear;
 }
 .keymap{
-    user-select: none;
+	user-select: none;
 	position: absolute;
 	background-color: var(--frost-bg);
 	left: 380px;
 	top: -300px;
 	border: 3px solid #d0d0ce;
 	padding-left: 10px;
-    padding-right: 20px;
+	padding-right: 20px;
 	border-radius: 13px;
-    
-    animation-name: floating;
-    animation-duration: 16s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
+	
+	animation-name: floating;
+	animation-duration: 16s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	margin-left: 30px;
+	margin-top: 5px;
 }
 #result {
-    width: 1000px;
-    background-color: var(--purple-bg);
-    border-radius: 12.5px;
-    padding: 50px;
-    
-    animation-name: fade-in;
-    animation-duration: .5s;
+	width: 1000px;
+	background-color: var(--purple-bg);
+	border-radius: 12.5px;
+	padding: 50px;
+	
+	animation-name: fade-in;
+	animation-duration: .5s;
 }
 #menu {
-    background: var(--frost-bg);
-    border-radius: 100px;
-    width: 300px;
+	background: var(--frost-bg);
+	border-radius: 100px;
+	width: 300px;
 }
 .config {
-    background: var(--frost-bg);
-    border-radius: 12.5px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 200px;
+	background: var(--frost-bg);
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 200px;
 }
 .signOut {
-    background: var(--frost-bg);
-    border-radius: 12.5px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 150px;
+	background: var(--frost-bg);
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
 }
 #menu:hover, .config:hover, .signOut:hover {
-    background-color: var(--purple-bg);
-    transition: 0.25s;
+	background-color: var(--purple-bg);
+	transition: 0.25s;
 }
 
 /* Animations */
 @keyframes correct {
-    to {
-        opacity:.25;
-    }
+	to {
+		opacity:.25;
+	}
 }
 @keyframes incorrect {
-    to {
-        opacity: .5;
-    }
+	to {
+		opacity: .5;
+	}
 }
 @keyframes floating {
-    0%  { transform: translate(0, 0px)  rotate(40deg); }
-    25% { transform: translate(0, 30px) rotate(39deg); }
-    50% { transform: translate(0, 0px)  rotate(40deg); }
-    75% { transform: translate(0, 30px) rotate(41deg); }
-    100%{ transform: translate(0, 0px)  rotate(40deg); }
+	0%  { transform: translate(0, 0px)  rotate(40deg); }
+	25% { transform: translate(0, 30px) rotate(39deg); }
+	50% { transform: translate(0, 0px)  rotate(40deg); }
+	75% { transform: translate(0, 30px) rotate(41deg); }
+	100%{ transform: translate(0, 0px)  rotate(40deg); }
 }
 @keyframes fade-in {
-    0%   { opacity: 0; }
+	0%   { opacity: 0; }
 	100% { opacity: 1; }
 }
 @keyframes focused {
-    to {
-        backdrop-filter: brightness(.5) blur(5px) grayscale(1);
-        filter: drop-shadow(0 0 1rem rgba(255, 255, 255, .8));
-    }
+	to {
+		backdrop-filter: brightness(.5) blur(5px) grayscale(1);
+		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, .8));
+	}
 }
