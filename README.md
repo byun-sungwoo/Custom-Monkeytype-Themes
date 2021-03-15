@@ -1,6 +1,6 @@
 # MonkeytypeSolarTheme
 
-![typing demo](demo/solar_typing_demo_2.gif)
+![typing demo](demo/solar_typing_demo_2-1.gif)
 
 ![menu demo](demo/solar_menu_demo_2.gif)
 
