@@ -1,0 +1,198 @@
+/*
+Monkeytype - Gruvbox Theme
+byun-sungwoo
+*/
+
+/* Variables */
+:root {
+	--black-bg: rgba(34, 36, 32, .9);
+	--frost-bg: rgba(255,255,255,.1);
+    --text-primary: rgb(215, 153, 33);
+    --text-secondary: rgb(235, 219, 178);
+    --text-error: rgb(207, 79, 79)
+}
+
+/* Background/Colors/Font */
+/* https://www.tutorialbrain.com/css_tutorial/css_font_family_list/ */
+body {
+	background-image: url(https://i.imgur.com/CA5w0Xq.png);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Consolas";
+    font-weight: 600;
+    --bg-color: var(--black-bg);
+	--main-color: var(--text-primary);
+	--caret-color: var(--text-primary);
+	--sub-color: var(--text-secondary);
+	--text-color: var(--text-primary);
+	--error-color: var(--text-error);
+	--error-extra-color: var(--text-error);
+	--colorful-error-color: var(--text-error);
+	--colorful-error-extra-color: var(--text-error);
+}
+body:focus-within {
+	animation-name: focused;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+/* Top Section */
+#top {
+	grid-template-columns: 1fr auto 1fr;
+}
+#top.focus {
+	opacity: 0;
+}
+#top .logo .top {
+	visibility: hidden;
+}
+#top .logo .top:after {
+	content: 'Consolas';
+	font-weight: 600;
+	visibility: visible;
+	display: block;
+	position: relative;
+}
+#top .logo .bottom {
+	visibility: hidden;
+}
+#top .logo .bottom:after {
+	content: 'Gruvbox';
+	visibility: visible;
+	display: block;
+	position: relative;
+	margin-top: -30px;
+}
+.icon-button.account.view-account .text {
+    display: none;
+}
+#startTestButton {
+	padding-left: 15px;
+}
+#menu {
+	border-radius: 100px;
+	width: 300px;
+}
+.config {
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 225px;
+}
+.signOut {
+	border-radius: 12.5px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
+    text-align: center;
+}
+#menu:hover, .config:hover, .signOut:hover {
+	background-color: var(--frost-bg);
+	transition: 0.25s;
+}
+.view-start {
+    color: #FB4934;
+}
+ .view-leaderboards {
+    color: #FABD2F;
+}
+.view-about {
+    color: #B8BB26;
+}
+.view-settings {
+    color: #83A598;
+}
+.view-account {
+    color: #D3869B;
+}
+
+/* Middle Section */
+#middle {
+	background-color: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    width: 1000px;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Bottom Section */
+#bottom {
+	visibility: hidden;
+}
+
+/* Non Typing Pages */
+.content {
+    backdrop-filter: brightness(.9) blur(5px);
+	padding: 15px;
+	border-radius: 10px;
+}
+.page.pageAbout.active {
+    backdrop-filter: brightness(.9) blur(5px);
+	padding: 15px;
+	border-radius: 10px;
+}
+div.page.pageSettings.active {
+    backdrop-filter: brightness(.9) blur(5px);
+	width: 1000px;
+	margin-top: 0px;
+	margin-right: 100px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	padding: 15px;
+}
+::-webkit-scrollbar {
+	background: transparent ;
+}
+i.fas.fa-fw.fa-spin.fa-circle-notch:before {
+    color: white;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
+}
+
+/* Typing */
+#wordsWrapper {
+	border-radius: 13px;
+}
+#typingTest letter.incorrect  {
+	animation-name: incorrect;
+	animation-duration: .25s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+.keymap {
+    user-select: none;
+    opacity: .5;
+}
+#result {
+	width: 1000px;
+    backdrop-filter: brightness(.9) blur(5px);
+	border-radius: 12.5px;
+	padding: 50px;
+	
+	animation-name: fade-in;
+	animation-duration: .5s;
+}
+#wordsWrapper:hover {
+    background-color: var(--frost-bg);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes incorrect {
+    0%  { transform: scale(1); }
+    50% { transform: scale(1.2); }
+	to  { transform: scale(1); }
+}
+@keyframes fade-in {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes focused {
+	to {
+		backdrop-filter: brightness(.75) blur(5px);
+	}
+}
