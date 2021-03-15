@@ -48,7 +48,7 @@ body:focus-within {
 	visibility: hidden;
 }
 #top .logo .top:after {
-	content: 'monkeytype';
+	content: 'Courier New';
 	font-weight: 600;
 	visibility: visible;
 	display: block;
@@ -62,7 +62,7 @@ body:focus-within {
 	content: 'Solar';
 	visibility: visible;
 	display: block;
-	color: #F6EEAF;
+	color: var(--text-primary);
 	position: relative;
 	margin-top: -30px;
 }
@@ -76,12 +76,12 @@ body:focus-within {
 	padding-left: 15px;
 }
 #menu {
-	background: var(--frost-bg);
+	backdrop-filter: brightness(.8) blur(5px);
 	border-radius: 100px;
 	width: 300px;
 }
 .config {
-	background: var(--frost-bg);
+	backdrop-filter: brightness(.8) blur(5px);
 	border-radius: 12.5px;
 	padding-right: 10px;
 	padding-top: 10px;
@@ -89,7 +89,7 @@ body:focus-within {
 	width: 225px;
 }
 .signOut {
-	background: var(--frost-bg);
+	backdrop-filter: brightness(.8) blur(5px);
 	border-radius: 12.5px;
 	padding-right: 10px;
 	padding-top: 10px;
@@ -98,14 +98,14 @@ body:focus-within {
     text-align: center;
 }
 #menu:hover, .config:hover, .signOut:hover {
-	background-color: var(--purple-bg);
+    backdrop-filter: brightness(.8) blur(5px);
 	transition: 0.25s;
 }
 
 /* Middle Section */
 #middle {
 	background-color: rgba(255, 255, 255, 0);
-	border-radius: 9px;
+    width: 1000px;
 	padding: 0px;
 	margin-left: auto;
 	margin-right: auto;
@@ -118,22 +118,21 @@ body:focus-within {
 
 /* Non Typing Pages */
 .content {
-	background-color: var(--purple-bg);
+	backdrop-filter: brightness(.8) blur(5px);
 	padding: 15px;
 	border-radius: 10px;
 }
 .page.pageAbout.active {
-	background-color: var(--purple-bg);
+	backdrop-filter: brightness(.8) blur(5px);
 	padding: 15px;
 	border-radius: 10px;
 }
 div.page.pageSettings.active {
+    backdrop-filter: brightness(.8) blur(5px);
 	width: 955px;
 	margin-top: 0px;
 	margin-right: 100px;
 	margin-bottom: 0px;
-	margin-left: -90px;
-	background-color: var(--purple-bg);
 	border-radius: 10px;
 	padding: 15px;
 }
@@ -142,15 +141,14 @@ div.page.pageSettings.active {
 }
 i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     color: white;
-    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 1rem white);
 }
 
 /* Typing */
 #typingTest {
 	position: absolute;
 	top: 100px;
-	left: -500px;
-	width: 755px;
+	width: 750px;
 }
 #wordsWrapper {
 	border-radius: 13px;
@@ -162,9 +160,8 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 	animation-timing-function: ease-in;
 }
 #typingTest letter.incorrect  {
-    opacity: .75;
 	animation-name: incorrect;
-	animation-duration: .1s;
+	animation-duration: .25s;
 	animation-fill-mode: forwards;
 	animation-timing-function: linear;
 }
@@ -186,41 +183,45 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 	margin-top: 5px;
 }
 #result {
+    backdrop-filter: brightness(.8) blur(5px);
 	width: 1000px;
-	background-color: var(--purple-bg);
 	border-radius: 12.5px;
 	padding: 50px;
 	
 	animation-name: fade-in;
 	animation-duration: .5s;
 }
-.keymap:hover, #wordsWrapper:hover {
+#wordsWrapper:hover {
     background-color: var(--frost-bg);
+    cursor: pointer;
     transition: 0.25s;
 }
 
 /* Animations */
 @keyframes correct {
-	to { opacity: .0; filter: blur(2px); }
+/* 	to { opacity: 0; filter: blur(2px); } */
 }
 @keyframes incorrect {
-    0%  { transform: translate(0, 0px); }
-    25% { transform: translate(-3px, 0px); }
-    50% { transform: translate(0, 0px);  opacity: .25;}
-    75% { transform: translate(3px, 0px); }
-	to  { transform: translate(0, 0px); opacity: .75; }
+    0%  { transform: scale(1); }
+    50% { transform: scale(1.2); }
+	to  { transform: scale(1); }
 }
 @keyframes floating {
-/* 	0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
-    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0 1rem rgba(255, 33, 124, 1)) }
-	50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(11, 255, 103, 1)) }
-	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 1rem rgba(11, 255, 225, 1)) }
-	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) } */
-    0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
-    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0)) }
-	50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
-	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0)) }
-	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1)) }
+    /*keyboard rgb*/
+/*     0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgb(255, 0, 0)) }
+    25% { transform: translate(0, 30px) rotate(39deg); }
+    33% { filter: drop-shadow(0 0 1rem rgb(0, 255, 0)) }
+    50% { transform: translate(0, 0px)  rotate(40deg); }
+    66% { filter: drop-shadow(0 0 1rem rgb(0, 0, 225)) }
+	75% { transform: translate(0, 30px) rotate(41deg); }
+	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem rgb(255, 0, 0)) } */
+    
+    /*keyboard pulse white*/
+    0%  { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
+    25% { transform: translate(0, 30px) rotate(39deg); filter: drop-shadow(0 0.2rem white) }
+    50% { transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
+	75% { transform: translate(0, 30px) rotate(41deg); filter: drop-shadow(0 0 .2rem white) }
+	100%{ transform: translate(0, 0px)  rotate(40deg); filter: drop-shadow(0 0 1rem white) }
 }
 @keyframes fade-in {
 	0%   { opacity: 0; }
@@ -228,7 +229,7 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 }
 @keyframes focused {
 	to {
-		backdrop-filter: brightness(.35) blur(5px) grayscale(1);
-		filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 1));
+		backdrop-filter: brightness(.35) blur(5px) grayscale(.25);
+		filter: drop-shadow(0 0 1rem white);
 	}
 }
