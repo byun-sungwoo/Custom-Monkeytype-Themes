@@ -145,7 +145,7 @@ div.page.pageSettings.active {
 	padding: 15px;
 }
 ::-webkit-scrollbar {
-	background: transparent ;
+	background: transparent;
 }
 i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     color: white;
@@ -180,6 +180,9 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     transition: 0.25s;
     cursor: pointer;
 }
+.scrollToTopButton {
+    display: none;
+}
 
 /* Animations */
 @keyframes incorrect {
@@ -193,6 +196,6 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 }
 @keyframes focused {
 	to {
-		backdrop-filter: brightness(.75) blur(5px);
+		backdrop-filter: brightness(.5) blur(5px);
 	}
 }
