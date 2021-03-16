@@ -143,6 +143,9 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     color: white;
     filter: drop-shadow(0 0 1rem white);
 }
+.scrollToTopButton {
+    display: none;
+}
 
 /* Typing */
 #typingTest {
