@@ -1,5 +1,5 @@
-![screenshot](demo/gruvbox_screenshot.png)
+![screenshot](demo/screenshot.png)
 
-![typing demo](demo/gruvbox_typing_demo.gif)
+![typing demo](demo/typing.gif)
 
-![menu demo](demo/gruvbox_menu_demo.gif)
+![menu demo](demo/menu.gif)

@@ -1,5 +1,5 @@
-![screenshot](demo/solar_screenshot.png)
+![screenshot](demo/screenshot.png)
 
-![typing demo](demo/solar_typing_demo.gif)
+![typing demo](demo/typing.gif)
 
-![menu demo](demo/solar_menu_demo.gif)
+![menu demo](demo/menu.gif)
