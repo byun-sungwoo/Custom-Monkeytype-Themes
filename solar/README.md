@@ -1,3 +1,4 @@
+🚀🚀🚀
 ![screenshot](demo/screenshot.png)
 
 ![typing demo](demo/typing.gif)

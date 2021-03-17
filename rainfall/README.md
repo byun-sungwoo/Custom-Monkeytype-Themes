@@ -1,3 +1,4 @@
+oh wow it's raining
 ![screenshot](demo/screenshot.png)
 
 ![typing demo](demo/typing.gif)

@@ -1,3 +1,4 @@
+( ｡一‿‿一｡)
 ![screenshot](demo/screenshot.png)
 
 ![typing demo](demo/typing.gif)
