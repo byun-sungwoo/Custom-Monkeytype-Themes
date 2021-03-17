@@ -12,3 +12,6 @@ If the keyboard positioning is off:
 - You should see ```#typingTest``` which is both the text and keyboard.
 	- For text only go to ```#wordsWrapper```.
 	- For keyboard only go to ```.keymap```.
+
+If the keyboard looks weird:
+- Try refreshing. I find that when I apply a page style from ```Stylus```, some elements often look off which immediately gets resolved after a refresh.
