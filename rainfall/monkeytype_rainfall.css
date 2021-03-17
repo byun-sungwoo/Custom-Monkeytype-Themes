@@ -25,9 +25,9 @@ byun-sungwoo
     --error-intensity: 0.2;
     
     /*Rain*/
-    --rain-speed: .2s;
+    --rain-speed: .33s;
     --rain-fade-in: 5s;
-    --rain-blur: 1.25px;
+    --rain-blur: 2px;
 }
 
 /* Background/Colors/Font */
@@ -58,14 +58,14 @@ body:focus-within {
     animation: focused var(--rain-fade-in) forwards ease-in-out;
 }
 body:focus-within:before {
-    background: url("https://i.imgur.com/yGLOfJb.png");
+    background: url(https://i.imgur.com/MUr41Z0.gif);
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     animation: rain var(--rain-speed) ease-in-out infinite, subtle-fade-in var(--rain-fade-in) ease-in-out forwards;
-    filter: blur(var(--rain-blur));
+    filter: blur(var(--rain-blur)) grayscale(1);
 }
 
 /* Top Section */
