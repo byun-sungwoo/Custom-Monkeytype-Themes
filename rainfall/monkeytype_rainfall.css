@@ -11,6 +11,7 @@ byun-sungwoo
     --text-primary: rgb(255, 255, 255);
     --text-secondary: rgb(200, 200, 200);
     --text-error: rgb(189, 165, 24);
+    --error-underline-color: rgb(189, 165, 24);
     
     /*Font*/
     --font-family: 'Ghibli';
@@ -23,6 +24,7 @@ byun-sungwoo
     --focused-backdrop: brightness(.9) blur(5px);
     --logo-hover: drop-shadow(0 0 1rem rgba(255, 255, 255, .5));
     --error-intensity: 0.2;
+    --top-animation-speed: .5s;
     
     /*Rain*/
     --rain-speed: .33s;
@@ -54,6 +56,8 @@ body {
     --colorful-error-color: var(--text-error);
     --colorful-error-extra-color: var(--text-error);
 }
+
+/* Typing Transition */
 body:focus-within {
     animation: focused var(--rain-fade-in) forwards ease-in-out;
 }
@@ -67,13 +71,18 @@ body:focus-within:before {
     animation: rain var(--rain-speed) ease-in-out infinite, subtle-fade-in var(--rain-fade-in) ease-in-out forwards;
     filter: blur(var(--rain-blur)) grayscale(1);
 }
+body[style*="cursor: none"] #top.focus {
+    animation: disappear var(--top-animation-speed) forwards ease-out;
+}
 
 /* Top Section */
 #top {
     grid-template-columns: 1fr auto 1fr;
+    transition: transform var(--top-animation-speed) ease;
 }
 #top.focus {
     opacity: 0;
+    transform: translateY(-25px);
 }
 #top .logo .top {
     visibility: hidden;
@@ -92,8 +101,21 @@ body:focus-within:before {
     display: block;
     margin-top: -30px;
 }
+#centerContent .focus {
+    visibility: visible;
+    opacity: 1;
+}
 #top .logo .bottom:hover {
     filter: var(--logo-hover);
+}
+#top .logo .bottom::after {
+    color: var(--text-primary);
+}
+#top.focus #menu .icon-button {
+    color: var(--text-secondary) !important;
+}
+#top.focus .config {
+    opacity: 1 !important;
 }
 .icon-button.account.view-account .text {
     display: none;
@@ -127,7 +149,7 @@ body:focus-within:before {
 }
 
 /* Bottom Section */
-#bottom {
+#bottom, #bottom.focus {
     visibility: hidden;
 }
 
@@ -181,6 +203,10 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     cursor: pointer;
     transition: 0.25s ease-in-out;
 }
+.word.error {
+    border-bottom: 2px solid var(--error-underline-color);
+    text-shadow: none;
+}
 
 /* Animations */
 @keyframes incorrect {
@@ -202,4 +228,11 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 }
 @keyframes focused {
     to  { backdrop-filter: var(--focused-backdrop); }
+}
+@keyframes focused {
+    to  { backdrop-filter: var(--focused-backdrop); }
+}
+@keyframes disappear {
+    0%  { opacity: 1; }
+    to  { opacity: 0; filter:blur(10px); }
 }

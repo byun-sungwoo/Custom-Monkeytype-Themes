@@ -11,6 +11,7 @@ byun-sungwoo
     --text-primary: rgb(245, 184, 45);
     --text-secondary: rgb(235, 219, 178);
     --text-error: rgb(207, 79, 79);
+    --error-underline-color: rgb(207, 79, 79);;
     
     /*Font*/
     --font-family: 'Consolas';
@@ -169,6 +170,10 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     background-color: var(--frost-bg);
     cursor: pointer;
     transition: 0.25s ease-in-out;
+}
+.word.error {
+    border-bottom: 2px solid var(--error-underline-color);
+    text-shadow: none;
 }
 
 /* Animations */

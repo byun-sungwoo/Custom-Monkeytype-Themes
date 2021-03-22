@@ -2,7 +2,7 @@ WIP - It's really janky and only works in 1920x1080... for now? Not sure if I'm 
 
 I made the wallpapers in paint, so there's no source.
 
-![screenshot](demo/screenshot.png)
+<img src="demo/screenshot.png" width="600px" height="338"/>
 
 ![typing demo](demo/typing.gif)
 

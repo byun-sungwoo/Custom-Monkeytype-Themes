@@ -10,6 +10,7 @@ byun-sungwoo
     --text-primary: #333333;
     --text-secondary: #aaa;
     --text-error: #E1373C;
+    --error-underline-color: #E1373C;
     
     /*Font*/
     --font-family: 'Helvetica Neue';
@@ -206,6 +207,10 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
 }
 .view-account {
     color: #009EDD;
+}
+.word.error {
+    border-bottom: 2px solid var(--error-underline-color);
+    text-shadow: none;
 }
 
 /* Animations */

@@ -2,7 +2,7 @@
 
 [[wallpaper source](https://mocah.org/386097-4k-wallpaper.html)] [[font source](https://www.dafont.com/space-1.font)]
 
-![screenshot](demo/screenshot.png)
+<img src="demo/screenshot.png" width="600px" height="338"/>
 
 ![typing demo](demo/typing.gif)
 

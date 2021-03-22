@@ -11,9 +11,10 @@ byun-sungwoo
     --text-primary: rgb(249, 242, 133);
     --text-secondary: rgb(255, 255, 255);
     --text-error: rgb(255, 33, 124);
+    --error-underline-color: rgb(255, 33, 124);
     
     /*Font*/
-    --font-family: 'space Xrebron'; /*Courier New*/
+    --font-family: 'Comfortaa'; /*Courier New*/
     --font-weight: bold;
     
     /*Other Details*/
@@ -176,6 +177,10 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     background-color: var(--frost-bg);
     cursor: pointer;
     transition: 0.25s ease-in-out;
+}
+.word.error {
+    border-bottom: 2px solid var(--error-underline-color);
+    text-shadow: none;
 }
 
 /* Animations */
