@@ -32,7 +32,7 @@ byun-sungwoo
     src: url('https://byun-sungwoo.github.io/font/space_1/space%20Xrebron_edit_3.otf') format("opentype");
 }
 body {
-    background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed;
+    background: url(https://i.imgur.com/SL065eA.png) no-repeat center fixed !important;
     background-size: cover;
     font-family: var(--font-family);
     font-weight: var(--font-weight);

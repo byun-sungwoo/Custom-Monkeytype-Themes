@@ -28,7 +28,7 @@ byun-sungwoo
 
 /* Background/Colors/Font */
 body {
-    background: url(https://i.imgur.com/CA5w0Xq.png) fixed;
+    background: url(https://i.imgur.com/CA5w0Xq.png) fixed !important;
     background-size: cover;
     font-family: var(--font-family);
     font-weight: var(--font-weight);

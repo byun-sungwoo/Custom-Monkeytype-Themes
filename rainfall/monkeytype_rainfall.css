@@ -42,7 +42,7 @@ byun-sungwoo
     src: url('https://byun-sungwoo.github.io/font/ghibli/Eyad%20Al-Samman%20-%20Ghibli-Bold.otf') format("opentype");
 }
 body {
-    background: url(https://i.imgur.com/zzvU08r.jpg) no-repeat center fixed;
+    background: url(https://i.imgur.com/zzvU08r.jpg) no-repeat center fixed !important;
     background-size: cover;
     font-family: var(--font-family);
     font-weight: var(--font-weight);
