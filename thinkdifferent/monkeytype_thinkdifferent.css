@@ -111,7 +111,10 @@ body:focus-within #top:hover {
 
 /* Bottom Section */
 #bottom {
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
 }
 
 /* Non Typing Pages */

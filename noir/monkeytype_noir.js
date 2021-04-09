@@ -160,7 +160,10 @@
   
 	/* Bottom Section */
 	#bottom, #bottom.focus {
-		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
 	}
   
 	/* Non Typing Pages */
