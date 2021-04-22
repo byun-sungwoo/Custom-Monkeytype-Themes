@@ -206,6 +206,11 @@ i.fas.fa-fw.fa-spin.fa-circle-notch:before {
     cursor: pointer;
     transition: 0.25s ease-in-out;
 }
+#middle.focus #wordsWrapper {
+    background-color: #fff0;
+    cursor: none;
+    transition: 0.25s ease-in-out;
+}
 .word.error {
     border-bottom: 2px solid var(--error-underline-color);
     text-shadow: none;
